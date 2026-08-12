@@ -52,9 +52,5 @@ RUN sed -i 's/config = _interactive_config(config)/pass/' api_server.py
 # Expose port
 EXPOSE 8000
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
-    CMD curl -f http://localhost:8000/result?id=health || exit 1
-
 # Start the solver with xvfb
 CMD ["sh", "-c", "xvfb-run -a --server-args='-screen 0 1920x1080x24 -ac' python3 api_server.py"]
