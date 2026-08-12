@@ -27,7 +27,7 @@ from smailpro_api import SmailProAPI, Provider
 # Initialize the API
 api = SmailProAPI(
     provider=Provider.GOOGLE,
-    solver_url="http://localhost:8000"  # Your solver service URL
+    solver_url="http://localhost:9000"  # Your solver service URL
 )
 
 # Create a new temporary email
@@ -62,7 +62,7 @@ if inbox.get('messages'):
 | Parameter | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
 | `provider` | `Provider` | `Provider.GOOGLE` | Email provider to use |
-| `solver_url` | `str` | `"http://127.0.0.1:8000"` | URL of the CAPTCHA solver service |
+| `solver_url` | `str` | `"http://127.0.0.1:9000"` | URL of the CAPTCHA solver service |
 | `session_token` | `Optional[str]` | `None` | Optional session token to bypass CAPTCHA |
 | `user_agent` | `str` | Chrome 120 UA | User agent string for requests |
 | `captcha_retry_max` | `int` | `2` | Maximum retries for CAPTCHA solving |

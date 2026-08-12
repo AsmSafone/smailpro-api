@@ -50,7 +50,7 @@ RUN playwright install chromium
 RUN sed -i 's/config = _interactive_config(config)/pass/' api_server.py
 
 # Expose port
-EXPOSE 8000
+EXPOSE 9000
 
 # Start the solver with xvfb
 CMD ["sh", "-c", "xvfb-run -a --server-args='-screen 0 1920x1080x24 -ac' python3 api_server.py"]

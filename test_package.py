@@ -6,7 +6,7 @@ def test_google():
     print("Testing Google provider...")
     api = SmailProAPI(
         provider=Provider.GOOGLE,
-        solver_url="http://127.0.0.1:8000"
+        solver_url="http://127.0.0.1:9000"
     )
     email_info = api.create_email()
     print(f"Created: {email_info['address']}")

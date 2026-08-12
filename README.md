@@ -19,7 +19,7 @@ from smailpro_api import SmailProAPI, Provider
 
 api = SmailProAPI(
     provider=Provider.GOOGLE,
-    solver_url="http://localhost:8000"
+    solver_url="http://localhost:9000"
 )
 
 email_info = api.create_email()

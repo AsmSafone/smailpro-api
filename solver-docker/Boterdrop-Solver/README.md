@@ -82,7 +82,7 @@ On first run, the script will create a `config.json` file. You can edit it direc
     "proxy_support": false,
     "proxy_file":    "proxies.txt",
     "host":          "0.0.0.0",
-    "port":          8000,
+    "port":          9000,
     "debug":         false,
     "cleanup_interval_minutes": 10
 }

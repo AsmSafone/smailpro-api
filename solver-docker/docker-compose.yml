@@ -5,7 +5,7 @@ services:
     build: .
     container_name: solver
     ports:
-      - "8000:8000"
+      - "9000:9000"
     environment:
       - THREADS=2
       - PAGE_COUNT=2

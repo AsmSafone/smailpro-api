@@ -43,7 +43,7 @@ PROVIDER_CONFIG = {
 TURNSTILE_SITEKEY = "0x4AAAAAAABIS_gEec2IwOhI"
 
 # Default solver URL
-DEFAULT_SOLVER_URL = "http://127.0.0.1:8000"
+DEFAULT_SOLVER_URL = "http://127.0.0.1:9000"
 
 
 class SmailProAPI:
@@ -58,7 +58,7 @@ class SmailProAPI:
     Example usage:
         api = SmailProAPI(
             provider=Provider.GOOGLE,
-            solver_url="http://localhost:8000"
+            solver_url="http://localhost:9000"
         )
         email = api.create_email()
         inbox = api.fetch_inbox(email)
@@ -79,7 +79,7 @@ class SmailProAPI:
         
         Args:
             provider: Email provider to use (default: GOOGLE)
-            solver_url: URL of the CAPTCHA solver service (default: http://127.0.0.1:8000)
+            solver_url: URL of the CAPTCHA solver service (default: http://127.0.0.1:9000)
             session_token: Optional session token to bypass CAPTCHA
             user_agent: User agent string for requests
             captcha_retry_max: Maximum retries for CAPTCHA solving
