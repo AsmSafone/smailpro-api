@@ -3,6 +3,7 @@ FROM python:3.11-slim
 # Install system dependencies for headless browser operation
 RUN apt-get update && apt-get install -y --no-install-recommends \
     xvfb \
+    xauth \
     libasound2 \
     libx11-xcb1 \
     libxcomposite1 \
@@ -16,7 +17,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libgtk-3-0 \
     wget \
     unzip \
+    curl \
     fonts-noto \
+    fonts-noto-cjk \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
@@ -42,9 +45,6 @@ RUN python3 -m camoufox fetch
 # Install Playwright dependencies
 RUN python3 -m playwright install-deps chromium || true
 RUN playwright install chromium
-
-# Install Xvfb dependencies
-RUN apt-get install -y xvfb
 
 # Remove the interactive config prompt
 RUN sed -i 's/config = _interactive_config(config)/pass/' api_server.py
