@@ -9,8 +9,6 @@ services:
     environment:
       - THREADS=2
       - PAGE_COUNT=2
-    volumes:
-      - ./config.json:/app/config.json
     restart: unless-stopped
     shm_size: '2gb'
     deploy:
