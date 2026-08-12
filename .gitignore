@@ -1,0 +1,23 @@
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+__pycache__/
+*.pyc
+
+# Python package internal files
+smailpro_api/.pypirc
+smailpro_api/src/smailpro_api/py.typed
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Solver runtime artifacts
+solver-docker/Boterdrop-Solver/solver.log
+solver-docker/Boterdrop-Solver/debug_logs/
